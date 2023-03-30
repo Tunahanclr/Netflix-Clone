@@ -1,11 +1,18 @@
+import { signOut } from 'firebase/auth'
 import React from 'react'
+import { toast } from 'react-toastify'
+import { auth } from '../firebase'
 import Main from './Main'
 import Movies from './Movies'
 
 export default function Navbar() {
+  const logout= async()=>{
+    await signOut(auth)
+    window.location="/"
+  }
   return (
    <>
-    <div className='flex items-center justify-between pl-12 pr-12 absolute p-4 z-50px  w-full '>
+    <div className='flex items-center justify-between  pl-16 pr-16 absolute p-4 z-50px  w-full '>
 <div className='flex items-center gap-10'>
  <h1  className='text-red-600 text-4xl font-bold cursor-pointer z-50'>NETFLİX</h1>
 <div className='flex items-center gap-4 z-50'>
@@ -19,7 +26,7 @@ export default function Navbar() {
 </div>
 
         <div className='z-50'>
-            <button className='bg-red-600 px-6 py-2 rounded cursor-pointer hover:bg-red-700  text-white z-50'>Log out</button>
+            <button className='bg-red-600 px-6 py-2 rounded cursor-pointer hover:bg-red-700  text-white z-50' onClick={logout}>Log out</button>
         </div>
     </div>
     <Main/>
