@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { auth } from '../firebase';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { toast,ToastContainer } from 'react-toastify';
@@ -42,6 +42,18 @@ export default function Auth() {
       }
     }
   }
+  // Kullanıcı oturum açmamışsa uyarı vermek için
+  const checkAuth = () => {
+    const user = auth.currentUser;
+    if (user) {
+      navigate('/browse');
+    } else {
+      toast.error('Bu sayfayı görüntülemek için önce oturum açın.');
+    }
+  }
+  useEffect(()=>{
+      checkAuth()
+  },[])
 return (
 <>
 <ToastContainer/>

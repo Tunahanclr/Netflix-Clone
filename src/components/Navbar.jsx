@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import { auth } from '../firebase'
 import Main from './Main'
 import Movies from './Movies'
+import Row from './Row'
 
 export default function Navbar() {
   const logout= async()=>{
@@ -15,7 +16,7 @@ export default function Navbar() {
    
     <div className='flex items-center justify-between pl-8   lg:pl-16 lg:pr-16 pr-10 absolute p-4 z-50px  w-full '>
 <div className='flex items-center gap-10'>
- <h1  className='text-red-600 text-3xl md:text-4xl  font-bold cursor-pointer z-50'>NETFLİX</h1>
+ <h1  className='text-red-600 text-2xl md:text-3xl  font-bold cursor-pointer z-50'>NETFLİX</h1>
 <div>
 <div className="lg:hidden relative  -space-x-8 z-50">
         <label htmlFor="mobile-menu" className="sr-only">
@@ -76,6 +77,7 @@ export default function Navbar() {
       
     </div>
     <Main/>
+    <Row/>
 
     {/* <Movies/> */}
    </>

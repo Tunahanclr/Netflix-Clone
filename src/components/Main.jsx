@@ -10,6 +10,7 @@ export default function Home() {
     axios.get(requests.requestPopular).then((response)=>{
       setMovies(response.data.results)
     })
+  console.log(requests)
   },[])
 
   return (
