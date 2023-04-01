@@ -5,7 +5,7 @@ import { auth } from '../firebase'
 import Main from './Main'
 import Movies from './Movies'
 import Row from './Row'
-
+import requests from '../Requests'
 export default function Navbar() {
   const logout= async()=>{
     await signOut(auth)
@@ -77,8 +77,11 @@ export default function Navbar() {
       
     </div>
     <Main/>
-    <Row/>
-
+    <Row title='Up Comming' fetchUrl={requests.requestUpcoming}/>
+    <Row title='Popular' fetchUrl={requests.requestPopular}/>
+    <Row title='Trending' fetchUrl={requests.requestTrending}/>
+    <Row title='Trending' fetchUrl={requests.requestTopRated}/>
+    <Row title='Horror' fetchUrl={requests.requestHorror}/>
     {/* <Movies/> */}
    </>
   )
