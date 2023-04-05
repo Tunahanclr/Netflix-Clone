@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className="flex items-center justify-between pl-8 lg:pl-16 lg:pr-16 pr-10 absolute p-4 z-50px w-full"
+        className="flex items-center justify-between pl-8 lg:pl-16 lg:pr-16 pr-10 absolute p-4  w-full"
         style={{
           position: "fixed",
           backgroundColor: navbarBackground,
@@ -43,11 +43,11 @@ export default function Navbar() {
         }}
       >
         <div className="flex items-center gap-10">
-          <h1 className="text-red-600 text-2xl md:text-3xl font-bold cursor-pointer z-50">
+          <h1 className="text-red-600 text-2xl md:text-3xl font-bold cursor-pointer">
             NETFLİX
           </h1>
           <div>
-            <div className="lg:hidden relative  -space-x-8 z-50">
+            <div className="lg:hidden relative  -space-x-8 ">
               <label htmlFor="mobile-menu" className="sr-only"></label>
               <select
                 id="mobile-menu"
@@ -119,7 +119,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <div className=" lg:items-center hidden lg:flex lg:whitespace-nowrap lg:gap-4 lg:z-50">
+          <div className=" lg:items-center hidden lg:flex lg:whitespace-nowrap lg:gap-4 ">
             <a
               className="text-white text-sm  transition-all font-semibold"
               href=""
@@ -161,7 +161,7 @@ export default function Navbar() {
 
         <div className="z-50">
           <button
-            className="bg-red-600 px-2 lg:px-6 py-2 rounded cursor-pointer hover:bg-red-700 whitespace-nowrap   text-white z-50"
+            className="bg-red-600 px-2 lg:px-6 py-2 rounded cursor-pointer hover:bg-red-700 whitespace-nowrap   text-white "
             onClick={logout}
           >
             Log out
@@ -169,11 +169,11 @@ export default function Navbar() {
         </div>
       </div>
       <Main />
-      <Row rowID='1' title="Up Comming" fetchUrl={requests.requestUpcoming} />
-      <Row rowID='2' title="Popular" fetchUrl={requests.requestPopular} />
-      <Row rowID='3' title="Trending" fetchUrl={requests.requestTrending} />
-      <Row rowID='4' title="Trending" fetchUrl={requests.requestTopRated} />
-      <Row rowID='5' title="Horror" fetchUrl={requests.requestHorror} />
+      <Row rowID="1" title="Up Comming" fetchUrl={requests.requestUpcoming} />
+      <Row rowID="2" title="Popular" fetchUrl={requests.requestPopular} />
+      <Row rowID="3" title="Trending" fetchUrl={requests.requestTrending} />
+      <Row rowID="4" title="Trending" fetchUrl={requests.requestTopRated} />
+      <Row rowID="5" title="Horror" fetchUrl={requests.requestHorror} />
       {/* <Movies/> */}
     </>
   );
