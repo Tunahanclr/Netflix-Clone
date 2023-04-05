@@ -4,6 +4,7 @@ What languages and library did I use
 1-HTML
 2-Tailwind CSS
 3-React
+4-Firebase
 4-Axios
 5-React icons
 
