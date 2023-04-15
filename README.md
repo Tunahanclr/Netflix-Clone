@@ -1,4 +1,4 @@
-demo:https://vercel.com/tunahanclr/netflix-clone
+demo:https://netflix-clone-ten-pi.vercel.app/
 
 What languages and library did I use
 1-HTML
